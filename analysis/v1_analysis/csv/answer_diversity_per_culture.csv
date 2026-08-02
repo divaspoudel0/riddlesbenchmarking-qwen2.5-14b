@@ -1,0 +1,52 @@
+community,display_label,n_riddles,n_filled_answers,answer_fill_rate,n_unique_answers,unique_answer_ratio_of_filled,entity_like_ratio,top_repeated_answers
+Lusoga_Uganda,"Lusoga, Uganda",100,95,0.95,79,0.8315789473684211,0.88,Ball. (x4); Dog. (x3); Pawpaws. (x3); Tree. (x3)
+Runyankole_Uganda,"Runyankole, Uganda",100,96,0.96,80,0.8333333333333334,0.87,Ball (x4); Dog (x3); Pawpaws (x3); Tree (x3)
+Luganda_Uganda,"Luganda, Uganda",100,100,1.0,86,0.86,0.98,Lake Victoria (x3); Farming (x3); Kintu (x2); Assembly Hut (x2)
+Assamese_India,"Assamese, India",100,100,1.0,92,0.92,0.87,Football (x3); Road  (x2); Hand-fan (x2); Cricket (x2)
+Kannada_India,"Kannada, India",100,100,1.0,93,0.93,0.96,Grinding stone (x3); Putting on bangles (x2); Onion (x2); Hailstone (x2)
+Uzbek_Uzbekistan,"Uzbek, Uzbekistan",100,100,1.0,94,0.94,0.96,Islam Karimov (x2); Sherali Juraev (x2); Jizzakh (x2); The Mischievous Boy (x2)
+Bengali_Bangladesh,"Bengali, Bangladesh",100,99,0.99,94,0.9494949494949495,0.86,Eyes (x4); Umbrella (x2); Rice (x2)
+Telugu_India,"Telugu, India",100,100,1.0,95,0.95,0.83,Chess (x2); Cricket (x2); Moon (x2); Chatrapathi Shivaji (x2)
+Lumasaba_Uganda,"Lumasaba, Uganda",100,100,1.0,95,0.95,1.0,Carving (x2); Wrestling (x2); Cooking (x2); Farming (x2)
+Swahili_Kenya,"Swahili, Kenya",100,100,1.0,96,0.96,0.94,Swahili (x2); The shape of the earth (x2); The water cycle (x2); Bomas of kenya (x2)
+Bengali_India,"Bengali, India",100,98,0.98,95,0.9693877551020408,0.96,Football (x3); Teeth (x2)
+Ukrainian_Ukraine,"Ukrainian, Ukraine",100,100,1.0,97,0.97,0.86,Khmelnytskyi (x2); Zaporizhzhia (x2); Lybid (x2)
+Spanish_Peru,"Spanish, Peru",100,100,1.0,97,0.97,0.88,Francisco Pizarro (x2); The Twelve-Angled Stone (x2); Claudio Pizarro (x2)
+Sinhala_Sri Lanka,"Sinhala, Sri Lanka",100,100,1.0,98,0.98,0.94,Cricket (x2); Bargaining (x2)
+Arabic_Syria,"Arabic, Syria",100,100,1.0,98,0.98,0.96,Bribe (x2); Damascus (x2)
+Malayalam_India,"Malayalam, India",100,100,1.0,98,0.98,0.84,Teeth (x3)
+Hungarian_Hungary,"Hungarian, Hungary",100,100,1.0,98,0.98,0.83,József Torgyán (x2); Ferenc Gyurcsány (x2)
+Marathi_India,"Marathi, India",100,63,0.63,62,0.9841269841269841,0.6,Eyes (x2)
+German_Germany,"German, Germany",100,98,0.98,97,0.9897959183673469,0.83,Berlin (x2)
+Tamil_India,"Tamil, India",100,100,1.0,99,0.99,0.83,Koozhu (fermented millet drink) (x2)
+Thai_Thailand,"Thai, Thailand",100,100,1.0,99,0.99,0.76,Kanok Pattern (x2)
+Persian_Iran,"Persian, Iran",100,100,1.0,99,0.99,0.9,Gheysar (x2)
+Vietnamese_Vietnam,"Vietnamese, Vietnam",100,100,1.0,99,0.99,0.82,Trinh Cong Son (x2)
+Yoruba_Nigeria,"Yoruba, Nigeria",100,100,1.0,99,0.99,0.86,Talking drum (x2)
+Chinese (Simplified)_China,"Chinese (Simplified), China",100,100,1.0,99,0.99,0.89,Yue Fei (x2)
+English_USA,"English, USA",100,100,1.0,99,0.99,0.84,Covid 19 (x2)
+Arabic_Morocco,"Arabic, Morocco",100,100,1.0,100,1.0,0.96,
+Urdu_Pakistan,"Urdu, Pakistan",100,100,1.0,100,1.0,0.72,
+Arabic_Sudan,"Arabic, Sudan",100,100,1.0,100,1.0,0.76,
+Tunisian Arabic_Tunisia,"Tunisian Arabic, Tunisia",100,100,1.0,100,1.0,0.94,
+Belarusian_Belarus,"Belarusian, Belarus",100,100,1.0,100,1.0,0.94,
+Brazilian_Portuguese,"Brazilian, Portuguese",100,100,1.0,100,1.0,0.93,
+Bugisnese_Indonesia,"Bugisnese, Indonesia",100,100,1.0,100,1.0,0.93,
+Bulgarian_Bulgaria,"Bulgarian, Bulgaria",100,100,1.0,100,1.0,0.68,
+Cantonese_China,"Cantonese, China",100,100,1.0,100,1.0,0.93,
+Spanish_Cuba,"Spanish, Cuba",100,100,1.0,100,1.0,0.9,
+Spanish_Argentina,"Spanish, Argentina",100,100,1.0,100,1.0,0.74,
+Italian_Italy,"Italian, Italy",100,100,1.0,100,1.0,0.93,
+Serbian_Serbia,"Serbian, Serbia",100,100,1.0,100,1.0,0.9,
+Russian_Russia,"Russian, Russia",100,100,1.0,100,1.0,0.86,
+Chinese_China,"Chinese, China",100,100,1.0,100,1.0,0.63,
+Portuguese_Portugal,"Portuguese, Portugal",100,100,1.0,100,1.0,0.98,
+Polish_Poland,"Polish, Poland",100,100,1.0,100,1.0,0.93,
+Dutch_Netherlands,"Dutch, Netherlands",100,100,1.0,100,1.0,0.96,
+Nepali_Nepal,"Nepali, Nepal",100,100,1.0,100,1.0,0.96,
+Mongondow_Indonesia,"Mongondow, Indonesia",100,100,1.0,100,1.0,0.98,
+English_Canada,"English, Canada",100,100,1.0,100,1.0,0.87,
+French_France,"French, France",100,100,1.0,100,1.0,0.83,
+Indonesian_Indonesia,"Indonesian, Indonesia",100,100,1.0,100,1.0,0.9,
+Konkani_India,"Konkani, India",100,100,1.0,100,1.0,0.93,
+Arabic_Egypt,"Arabic, Egypt",100,100,1.0,100,1.0,0.73,

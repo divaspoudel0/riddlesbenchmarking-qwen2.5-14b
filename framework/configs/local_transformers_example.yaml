@@ -1,0 +1,54 @@
+runner_name: mufli
+
+dataset_path: ../data_loading/pilot_dataset/smoke_test_25.jsonl
+dataset_version: smoke_test 
+
+prompt_template_id: riddle_master
+prompt_template_version: v1
+prompt_language: eng
+riddle_language_presented: source
+is_hint_provided: false
+
+reasoning_mode: null
+search_enabled: false
+batch_mode: true
+batch_size: 64
+
+temperature: null
+max_output_tokens: 16
+seed: null
+
+model_params:
+  model_load:
+    device_map: auto
+    dtype: float16
+
+cache_enabled: true
+cache_backend: cachesaver
+cache_namespace: multicultural_riddles/smoke_test/gemma4/source_no_hint/v1
+cache_dir: .cache/cachesaver
+local_cache_client_mode: sync
+
+api_key_env_var: null
+base_url: null
+
+runner_version: v1.0.0
+notes: local transformers example
+strict_capability_check: true
+
+# NOTE: requires `uv sync --extra local` to install torch + transformers.
+# Replace provider_model_name with the actual Hugging Face model id before running.
+model_spec:
+  model_name: gemma-4-E4B-it
+  model_id: local/gemma-4-E4B-it
+  provider: local
+  access_pattern: local
+  provider_model_name: google/gemma-4-E4B-it
+  closed_source: false
+  notes: local HF model
+  capabilities:
+    supports_reasoning: false
+    supports_search: false
+    supports_structured_output: false
+    supports_batch: true
+    supports_seed: true

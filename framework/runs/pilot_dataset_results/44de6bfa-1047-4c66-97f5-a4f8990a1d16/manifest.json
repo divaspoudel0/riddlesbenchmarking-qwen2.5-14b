@@ -1,0 +1,14 @@
+{
+  "run_id": "44de6bfa-1047-4c66-97f5-a4f8990a1d16",
+  "status": "completed",
+  "model_name": "GPT5.5",
+  "model_id": "openai/gpt-5.5",
+  "total_instances": 500,
+  "completed_instances": 489,
+  "skipped_instances": 0,
+  "error_instances": 11,
+  "batch_mode_used": false,
+  "batch_size": null,
+  "cache_enabled": true,
+  "cache_namespace": "multicultural_riddles/pilot_dataset_5lang/gpt55_high/source_no_hint/master_v1"
+}

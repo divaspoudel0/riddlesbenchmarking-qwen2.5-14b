@@ -1,0 +1,14 @@
+{
+  "run_id": "9b59c685-0322-4c2f-85d3-8c07d52b2368",
+  "status": "completed",
+  "model_name": "Tiny-Aya global",
+  "model_id": "cohere/tiny-aya-global",
+  "total_instances": 500,
+  "completed_instances": 500,
+  "skipped_instances": 0,
+  "error_instances": 0,
+  "batch_mode_used": false,
+  "batch_size": null,
+  "cache_enabled": true,
+  "cache_namespace": "multicultural_riddles/pilot_dataset_5lang/tiny_aya_global/source_no_hint/master_v1"
+}

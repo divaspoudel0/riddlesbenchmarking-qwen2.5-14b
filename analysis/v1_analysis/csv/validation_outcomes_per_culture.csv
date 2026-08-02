@@ -1,0 +1,23 @@
+community,correct,partial,uncertain,incorrect,display_label,n_rated
+Arabic_Egypt,0.91,0.03,0.0,0.06,"Arabic, Egypt",100
+Arabic_Morocco,0.759493670886076,0.05063291139240506,0.0,0.189873417721519,"Arabic, Morocco",79
+Arabic_Sudan,0.81,0.06,0.0,0.13,"Arabic, Sudan",100
+Arabic_Syria,0.75,0.11,0.0,0.14,"Arabic, Syria",100
+Bengali_Bangladesh,0.7733333333333333,0.12,0.0,0.10666666666666667,"Bengali, Bangladesh",75
+Bengali_India,0.9545454545454546,0.045454545454545456,0.0,0.0,"Bengali, India",22
+Chinese (Simplified)_China,0.8301886792452831,0.07547169811320754,0.0,0.09433962264150944,"Chinese (Simplified), China",53
+Dutch_Netherlands,0.93,0.06,0.0,0.01,"Dutch, Netherlands",100
+English_Canada,0.8688524590163934,0.04918032786885246,0.0,0.08196721311475409,"English, Canada",61
+English_USA,0.92,0.07,0.0,0.01,"English, USA",100
+French_France,1.0,0.0,0.0,0.0,"French, France",100
+Italian_Italy,0.9,0.03,0.0,0.07,"Italian, Italy",100
+Malayalam_India,0.53,0.11,0.0,0.36,"Malayalam, India",100
+Persian_Iran,0.8493150684931506,0.0547945205479452,0.0,0.0958904109589041,"Persian, Iran",73
+Polish_Poland,0.89,0.04,0.0,0.07,"Polish, Poland",100
+Russian_Russia,0.9,0.05,0.05,0.0,"Russian, Russia",100
+Spanish_Peru,0.66,0.16,0.0,0.18,"Spanish, Peru",100
+Tamil_India,0.74,0.09,0.0,0.17,"Tamil, India",100
+Thai_Thailand,0.81,0.04,0.14,0.01,"Thai, Thailand",100
+Tunisian Arabic_Tunisia,1.0,0.0,0.0,0.0,"Tunisian Arabic, Tunisia",100
+Ukrainian_Ukraine,0.85,0.1,0.0,0.05,"Ukrainian, Ukraine",60
+Uzbek_Uzbekistan,0.77,0.06,0.0,0.17,"Uzbek, Uzbekistan",100

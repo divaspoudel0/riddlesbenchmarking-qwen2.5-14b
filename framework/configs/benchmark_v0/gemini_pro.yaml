@@ -1,0 +1,49 @@
+runner_name: benchmark_v0
+
+dataset_path: ../data_loading/pilot_dataset/pilot_dataset_v1.jsonl
+dataset_version: pilot_dataset_v1
+
+prompt_template_id: riddle_master
+prompt_template_version: v1
+prompt_language: eng
+riddle_language_presented: source
+is_hint_provided: false
+
+reasoning_mode: null
+search_enabled: false
+batch_mode: false
+
+temperature: null
+max_output_tokens: 4096
+seed: null
+
+model_params: {}
+
+cache_enabled: true
+cache_backend: cachesaver
+cache_namespace: multicultural_riddles/pilot_dataset_v1/gemini_pro/source_no_hint/master_v1
+cache_dir: .cache/cachesaver
+
+api_key_env_var: GEMINI_API_KEY
+base_url: null
+
+runner_version: v1.0.0
+notes: Gemini Pro
+strict_capability_check: true
+
+# NOTE: provider_model_name is a placeholder. Confirm the real Google model
+# string your team has API access to before running.
+model_spec:
+  model_name: gemini-3.1-pro-preview
+  model_id: google/gemini-3.1-pro-preview
+  provider: google
+  access_pattern: direct_api
+  provider_model_name: gemini-3.1-pro-preview
+  closed_source: true
+  notes: Gemini Pro via Google AI API
+  capabilities:
+    supports_reasoning: true
+    supports_search: false
+    supports_structured_output: true
+    supports_batch: false
+    supports_seed: false

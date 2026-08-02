@@ -1,0 +1,14 @@
+{
+  "run_id": "028afbc0-334c-4bf9-86b1-70718e6ea7c4",
+  "status": "completed",
+  "model_name": "Gemma 4 31B IT",
+  "model_id": "google/gemma-4-31b-it-openrouter",
+  "total_instances": 500,
+  "completed_instances": 499,
+  "skipped_instances": 0,
+  "error_instances": 1,
+  "batch_mode_used": false,
+  "batch_size": null,
+  "cache_enabled": true,
+  "cache_namespace": "multicultural_riddles/pilot_dataset_5lang/gemma4_openrouter/source_no_hint/master_v1"
+}

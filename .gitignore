@@ -1,0 +1,19 @@
+.env
+__pycache__/
+evals/*.jsonl
+evals/*.log
+evals/outputs/
+runs/*
+
+# Python envs
+.venv/
+
+new_env
+HumanEval
+humaneval_validation/*.log
+# macOS metadata files
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/

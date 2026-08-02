@@ -1,0 +1,25 @@
+{"riddle_id": "arabic_egypt_politics_001", "candidate": "ميدان التحرير", "reference": "التحرير", "match": false}
+{"riddle_id": "arabic_egypt_politics_002", "candidate": "سعد زغلول", "reference": "سعد زغلول", "match": true}
+{"riddle_id": "arabic_egypt_politics_003", "candidate": "محمد نجيب", "reference": "محمد نجيب", "match": true}
+{"riddle_id": "arabic_egypt_politics_004", "candidate": "مجلس النواب", "reference": "مجلس النواب/مجلس الشعب/البرلمان", "match": false}
+{"riddle_id": "arabic_egypt_politics_005", "candidate": "السفير", "reference": "السفير/النائب", "match": false}
+{"riddle_id": "chinese_china_politics_001", "candidate": "我不知道", "reference": "事頭婆", "match": false}
+{"riddle_id": "chinese_china_politics_002", "candidate": "I don't know", "reference": "保利事", "match": false}
+{"riddle_id": "chinese_china_politics_003", "candidate": "人大代表", "reference": "拋利他", "match": false}
+{"riddle_id": "chinese_china_politics_004", "candidate": "中国共产党", "reference": "中共", "match": false}
+{"riddle_id": "chinese_china_politics_005", "candidate": "竞选承诺", "reference": "跑立刻撕", "match": false}
+{"riddle_id": "english_usa_politics_001", "candidate": "I don't know", "reference": "Thomas Jefferson", "match": false}
+{"riddle_id": "english_usa_politics_002", "candidate": "Donald Trump", "reference": "Donald Trump", "match": true}
+{"riddle_id": "english_usa_politics_003", "candidate": "the First Amendment", "reference": "First Amendment", "match": false}
+{"riddle_id": "english_usa_politics_004", "candidate": "I don't know", "reference": "Second Amendment", "match": false}
+{"riddle_id": "english_usa_politics_005", "candidate": "George Washington", "reference": "I am George Washington", "match": false}
+{"riddle_id": "russian_russia_politics_001", "candidate": "Владимир Жириновский", "reference": "Владимир Жириновский", "match": true}
+{"riddle_id": "russian_russia_politics_002", "candidate": "Владимир Ленин", "reference": "Ленин", "match": false}
+{"riddle_id": "russian_russia_politics_003", "candidate": "Борис Ельцин", "reference": "Борис Ельцин", "match": true}
+{"riddle_id": "russian_russia_politics_004", "candidate": "Леонид Брежнев", "reference": "Леонид Брежнев", "match": true}
+{"riddle_id": "russian_russia_politics_005", "candidate": "Дмитрий Медведев", "reference": "Дмитрий Медведев", "match": true}
+{"riddle_id": "tamil_india_politics_001", "candidate": "மு. கருணாநிதி", "reference": "கருணாநிதி (கலைஞர்)", "match": false}
+{"riddle_id": "tamil_india_politics_002", "candidate": "பெரியார்", "reference": "பெரியார் ", "match": true}
+{"riddle_id": "tamil_india_politics_003", "candidate": "சுயமரியாதை இயக்கம்", "reference": "சுயமரியாதை இயக்கம்", "match": true}
+{"riddle_id": "tamil_india_politics_004", "candidate": "கருப்பு நிறம்", "reference": "கருப்பு", "match": false}
+{"riddle_id": "tamil_india_politics_005", "candidate": "திராவிட முன்னேற்றக் கழகம் (திமுக)", "reference": "உதய சூரியன் - திராவிட முன்னேற்ற கழகம் (திமுக)", "match": false}

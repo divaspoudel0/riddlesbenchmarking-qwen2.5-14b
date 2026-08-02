@@ -1,0 +1,10 @@
+issue,community,detail
+excluded_low_fill,Japanese_Japan,Cultural Riddles Benchmark [Japanese_Japan]_partial.xlsx has only 20 filled riddle rows; excluded
+fallback_sheet_used,Luganda_Uganda,Cultural Riddles Benchmark [Luganda_Uganda].xlsx has no 'Riddles' worksheet; used 'Cultural Riddles Benchmark Luga' instead
+fallback_sheet_used,Lumasaba_Uganda,Cultural Riddles Benchmark [Lumasaba_Uganda].xlsx has no 'Riddles' worksheet; used 'Cultural Riddles Benchmark luma' instead
+fallback_sheet_used,Lusoga_Uganda,Cultural Riddles Benchmark [Lusoga_Uganda].xlsx has no 'Riddles' worksheet; used 'Cultural Riddles Benchmark Luso' instead
+fallback_sheet_used,Runyankole_Uganda,Cultural Riddles Benchmark [Runyankole_Uganda].xlsx has no 'Riddles' worksheet; used 'Cultural Riddles Benchmark Runy' instead
+duplicate_submission_dropped,Spanish_Argentina,Cultural Riddles Benchmark [Spanish_Argentina](1).xlsx overlaps 100% with Cultural Riddles Benchmark [Spanish_Argentina].xlsx; dropped Cultural Riddles Benchmark [Spanish_Argentina](1).xlsx
+english_translation_backfilled_from_original,English_*,100 rows in English-original communities had a blank 'Riddle (English Translation)' column; filled from the Original-language column since it is already English
+english_translation_backfilled_from_original,English_*,100 rows in English-original communities had a blank 'Reference Answer (English)' column; filled from the Original-language column since it is already English
+near_duplicate_community_pair,Lusoga_Uganda / Runyankole_Uganda,riddle-text overlap 60%; shared authors: Roland Ganafa + Alex Gimei

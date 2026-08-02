@@ -1,0 +1,12 @@
+{
+  "run_id": "5c5b3151-d3a1-4228-9e83-742b4cd2cd58",
+  "status": "completed",
+  "model_name": "GPT5.5-high",
+  "model_id": "openai/gpt-5.5-high",
+  "total_instances": 25,
+  "completed_instances": 25,
+  "skipped_instances": 0,
+  "error_instances": 0,
+  "cache_enabled": true,
+  "cache_namespace": "multicultural_riddles/smoke_test_25/openai_gpt55_high/source_no_hint/riddle_master_v1"
+}

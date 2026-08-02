@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+runs/*
+!runs/examples/
+!runs/pilot_dataset_results/
+.cache/
+.DS_Store

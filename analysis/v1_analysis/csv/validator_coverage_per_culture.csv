@@ -1,0 +1,52 @@
+community,n_riddles,n_rated,validator_coverage,display_label,pct_correct_of_rated
+Arabic_Egypt,100,100,1.0,"Arabic, Egypt",0.91
+Thai_Thailand,100,100,1.0,"Thai, Thailand",0.81
+Malayalam_India,100,100,1.0,"Malayalam, India",0.53
+Polish_Poland,100,100,1.0,"Polish, Poland",0.89
+French_France,100,100,1.0,"French, France",1.0
+English_USA,100,100,1.0,"English, USA",0.92
+Dutch_Netherlands,100,100,1.0,"Dutch, Netherlands",0.93
+Russian_Russia,100,100,1.0,"Russian, Russia",0.9
+Tamil_India,100,100,1.0,"Tamil, India",0.74
+Spanish_Peru,100,100,1.0,"Spanish, Peru",0.66
+Tunisian Arabic_Tunisia,100,100,1.0,"Tunisian Arabic, Tunisia",1.0
+Uzbek_Uzbekistan,100,100,1.0,"Uzbek, Uzbekistan",0.77
+Arabic_Syria,100,100,1.0,"Arabic, Syria",0.75
+Arabic_Sudan,100,100,1.0,"Arabic, Sudan",0.81
+Italian_Italy,100,100,1.0,"Italian, Italy",0.9
+Arabic_Morocco,100,79,0.79,"Arabic, Morocco",0.759493670886076
+Bengali_Bangladesh,100,75,0.75,"Bengali, Bangladesh",0.7733333333333333
+Persian_Iran,100,73,0.73,"Persian, Iran",0.8493150684931506
+English_Canada,100,61,0.61,"English, Canada",0.8688524590163934
+Ukrainian_Ukraine,100,60,0.6,"Ukrainian, Ukraine",0.85
+Chinese (Simplified)_China,100,53,0.53,"Chinese (Simplified), China",0.8301886792452831
+Bengali_India,100,22,0.22,"Bengali, India",0.9545454545454546
+Yoruba_Nigeria,100,2,0.02,"Yoruba, Nigeria",1.0
+Konkani_India,100,0,0.0,"Konkani, India",
+Luganda_Uganda,100,0,0.0,"Luganda, Uganda",
+Vietnamese_Vietnam,100,0,0.0,"Vietnamese, Vietnam",
+Assamese_India,100,0,0.0,"Assamese, India",
+Urdu_Pakistan,100,0,0.0,"Urdu, Pakistan",
+Belarusian_Belarus,100,0,0.0,"Belarusian, Belarus",
+Brazilian_Portuguese,100,0,0.0,"Brazilian, Portuguese",
+Bugisnese_Indonesia,100,0,0.0,"Bugisnese, Indonesia",
+Telugu_India,100,0,0.0,"Telugu, India",
+Bulgarian_Bulgaria,100,0,0.0,"Bulgarian, Bulgaria",
+Swahili_Kenya,100,0,0.0,"Swahili, Kenya",
+Cantonese_China,100,0,0.0,"Cantonese, China",
+Spanish_Cuba,100,0,0.0,"Spanish, Cuba",
+Spanish_Argentina,100,0,0.0,"Spanish, Argentina",
+Sinhala_Sri Lanka,100,0,0.0,"Sinhala, Sri Lanka",
+Serbian_Serbia,100,0,0.0,"Serbian, Serbia",
+Chinese_China,100,0,0.0,"Chinese, China",
+Runyankole_Uganda,100,0,0.0,"Runyankole, Uganda",
+Portuguese_Portugal,100,0,0.0,"Portuguese, Portugal",
+German_Germany,100,0,0.0,"German, Germany",
+Hungarian_Hungary,100,0,0.0,"Hungarian, Hungary",
+Nepali_Nepal,100,0,0.0,"Nepali, Nepal",
+Mongondow_Indonesia,100,0,0.0,"Mongondow, Indonesia",
+Marathi_India,100,0,0.0,"Marathi, India",
+Indonesian_Indonesia,100,0,0.0,"Indonesian, Indonesia",
+Lusoga_Uganda,100,0,0.0,"Lusoga, Uganda",
+Kannada_India,100,0,0.0,"Kannada, India",
+Lumasaba_Uganda,100,0,0.0,"Lumasaba, Uganda",

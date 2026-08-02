@@ -1,0 +1,62 @@
+community,name,language_iso,run_batch,riddle_count,contributors
+afaan_oromo_oromo,Afaan Oromo Oromo,gaz,v2,100,Bontu Fufa; Debela Yadeta
+arabic_egypt,Arabic Egypt,arz,v0,100,Farah Abdou; Nadine Elframawy; Rawan Elframawy
+arabic_lebanese,Arabic Lebanese,apc,v2,100,Adnan El Assadi
+arabic_morocco,Arabic Morocco,ary,v0,100,Abdellah El Mekki; Abderrahmane Issam; Zakaria Baannou
+arabic_sudan,Arabic Sudan,apd,v0,100,abdelhadi Osama; Eithar Ismail; Wafaa Mohammed
+arabic_syria,Arabic Syria,apc,v0,100,Yusser Al Ghussin; Zena AL Khalili
+assamese_india,Assamese India,asm,v1,100,Angana Borah; Dipti Borah Hazarika; Mina Saikia; Prasanta Borah
+belarusian_belarus,Belarusian Belarus,bel,v0,100,Ilia Afanasev; Iryna Balunenka; Oksana Volchek; Vladislav Poritski
+bengali_bangladesh,Bengali Bangladesh,ben,v0,100,Ahanaf Aziz; Istiak; Nazia Tasnim
+bengali_india,Bengali India,ben,v0,100,Ankita Maity; Ruchira; Souvik
+brazilian_portuguese,Brazilian Portuguese,por,v0,100,Daniel Souza; facms; FelipeBocaJR; its_assisgab; João Paulo; Juliana Carvalho; Lucas Resck; mrncstt; Pedro Delgado
+bugisnese_indonesia,Bugisnese Indonesia,bug,v0,100,Ahmad Mufli Ramadhan
+bulgarian_bulgaria,Bulgarian Bulgaria,bul,v0,100,Ralitza Rizova
+cantonese_china,Cantonese China,yue,v0,100,Fengran Mo; Jinghan Zhang
+catalan_catalonia,Catalan Catalonia,cat,v2,100,Aleix; Irene; Javi; Marc; Ona
+chinese_china,Chinese China,zho,v0,100,Stephy Chen
+chinese_malaysia,Chinese Malaysia,zho,v2,100,Nancy F. Chen; Zhengyuan Liu
+chinese_simplified_china,Chinese Simplified China,zho,v0,100,Bin; Cecilia; Charles; Di; Kaiser; Lingbo; Tenney
+chinese_singapore,Chinese Singapore,zho,v2,100,Ruiyang Tan; Weihua Zheng
+dutch_netherlands,Dutch Netherlands,nld,v0,100,Charlotte; David; Mike; Rochelle
+english_canada,English Canada,eng,v0,100,Jane Smith; Julia Kreutzer; Madeline Smith; Matt Bobkin
+english_usa,English Usa,eng,v0,100,Ananya Sahu; Henry Gagnier; Jonathan Swindell; Sajag Swami; Swati Rajwal
+french_canada,French Canada,fra,v2,100,Lauren; Micol
+french_france,French France,fra,v0,100,BryanBradfo; Wafa Aissa
+german_germany,German Germany,deu,v0,100,Diana Kozachek; Julia Kreutzer
+gujarati_india,Gujarati India,guj,v2,100,Amit Agarwal; Fenal Ilasariya; Hitesh Patel
+hungarian_hungary,Hungarian Hungary,hun,v0,100,Károly Boczka
+indonesian_indonesia,Indonesian Indonesia,ind,v0,100,Ahmad Mufli Ramadhan; Muhammad Ravi Shulthan Habibi
+italian_italy,Italian Italy,ita,v0,100,Lisa Alazraki; Marco De Santis
+japanese_japan,Japanese Japan,jpn,v2,100,Reuben
+kannada_india,Kannada India,kan,v1,100,Emile Anand; Vanya Bannihatti Kumar
+konkani_india,Konkani India,kok,v0,100,prerana rane; Vivek Silimkhan
+luganda_uganda,Luganda Uganda,lug,v0,100,Alex Gimei
+lumasaba_uganda,Lumasaba Uganda,myx,v0,100,Alex Gimei
+luxembourgish_luxembourg,Luxembourgish Luxembourg,ltz,v2,100,Cedric Lothritz; Fred Philippy
+malay_malaysia,Malay Malaysia,zsm,v2,100,Roy Ka-Wei Lee
+malayalam_india,Malayalam India,mal,v0,100,Arya Hariharan; Arya Suneesh
+marathi_india,Marathi India,mar,v0,100,Rushikesh Zawar; Yash Bagla
+mongondow_indonesia,Mongondow Indonesia,mog,v0,100,Ahmad Mufli Ramadhan
+nepali_nepal,Nepali Nepal,nep,v0,100,Dikshya Poudel; Divas Poudel; jebish7
+persian_iran,Persian Iran,pes,v0,100,Amin Shfaiei; Aylin Naebzadeh; Hamidreza Saffari; Houman Mehrafarin; Masoumeh Javadi Zarnaghi; Mehrnaz Mofakhami; Melika Davoodzadeh; Pouya Sadeghi; Sara Rajaee; Sarah Bahrami
+polish_poland,Polish Poland,pol,v0,100,Dominik Krzeminski; Joanna Radoła
+portuguese_portugal,Portuguese Portugal,por,v0,100,diogom
+russian_russia,Russian Russia,rus,v0,100,Anastasiia Nikitina; Andrei Nikitin; Dina Pisarevskaya; Galina Kozulina; Sergey Sedov
+serbian_serbia,Serbian Serbia,srp,v0,100,Danka Jokić; Milica Andrić; Nebojša Damnjanović; Toma Knežević
+sindhi_india,Sindhi India,snd,v2,100,Naman Bhatia
+sinhala_sri_lanka,Sinhala Sri Lanka,sin,v0,100,Sayuru
+spanish_argentina,Spanish Argentina,spa,v0,100,Leandro Cossio; Matías Ávalos; Silvia Fernández
+spanish_cuba,Spanish Cuba,spa,v0,100,Eduardo Sánchez; Fernando Ortiz; Rogelio Díaz Castillo
+spanish_peru,Spanish Peru,spa,v0,100,David Quispe-Castillo; Fabrizzio Marin Colquichagua; Luis Fernando Solis Navarro
+swahili_kenya,Swahili Kenya,swa,v0,100,Loice Nanyanga; Priscilla; Valen
+tamil_india,Tamil India,tam,v0,100,Vinod
+telugu_india,Telugu India,tel,v0,100,Akhil Eppa; Indu; Jayanth Krishna Chundru; Leema; Manaswitha Sunkara; Prahitha Movva; Salman Khan; Tejaswi Sunkara
+thai_thailand,Thai Thailand,tha,v0,100,Kanison Tungsupakij; Patteera Triamamornwooth; Punnatud Duengkae; Rapol Tongchenchitt; Warit Lekmuenwai
+tunisian_arabic_tunisia,Tunisian Arabic Tunisia,aeb,v1,100,Safa Faraa; Wafa Aissa
+turkish_turkey,Turkish Turkey,tur,v2,100,Ceren Berk
+ukrainian_ukraine,Ukrainian Ukraine,ukr,v1,100,Hanna Yukhymenko; Olena Bugaiova; Yurii Paniv
+urdu_pakistan,Urdu Pakistan,urd,v0,100,Muhammad Saad Umar
+uzbek_uzbekistan,Uzbek Uzbekistan,uzb,v0,100,Abdumutalib Begmuratov
+vietnamese_vietnam,Vietnamese Vietnam,vie,v2,100,Christian Hoang; My Chiffon Nguyen; Van Ngo
+yoruba_nigeria,Yoruba Nigeria,yor,v0,100,Esther Adenuga; Joy Olusanya; Seun Ajayi; Yusuf Ismail
