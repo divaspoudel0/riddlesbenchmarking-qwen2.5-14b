@@ -84,14 +84,11 @@ def _constants(mo):
             "tag": "qwen2.5-32b",
         },
     }
-    model_choice = mo.radio(
+    model_choice = mo.ui.radio(
         options=list(MODELS),
         value="Qwen/Qwen2.5-14B-Instruct-AWQ",
         label="Hugging Face AWQ model",
     )
-    MODEL_ID = model_choice.value
-    MODEL_TAG = MODELS[MODEL_ID]["tag"]
-    CONFIG_PATH = REPO_DIR / "framework/configs/benchmark_v0" / MODELS[MODEL_ID]["config"]
 
     DATASET_PATH = REPO_DIR / "data_loading/pilot_dataset/pilot_dataset_v1.jsonl"
     SMOKE_PATH = REPO_DIR / "data_loading/pilot_dataset/smoke_test_25.jsonl"
@@ -101,10 +98,8 @@ def _constants(mo):
     TASK_ID = "ID"  # TODO: replace with your tracking-sheet ID
     return (
         CACHE_DIR,
-        CONFIG_PATH,
         DATASET_PATH,
-        MODEL_ID,
-        MODEL_TAG,
+        MODELS,
         OUTPUT_ROOT,
         PROGRESS_EVERY,
         REPO_DIR,
@@ -114,6 +109,15 @@ def _constants(mo):
         TASK_ID,
         model_choice,
     )
+
+
+@app.cell
+def _model_sel(MODELS, REPO_DIR, model_choice):
+    """Resolve the selected model to its config + tag (read in a separate cell)."""
+    MODEL_ID = model_choice.value
+    MODEL_TAG = MODELS[MODEL_ID]["tag"]
+    CONFIG_PATH = REPO_DIR / "framework/configs/benchmark_v0" / MODELS[MODEL_ID]["config"]
+    return (CONFIG_PATH, MODEL_ID, MODEL_TAG)
 
 
 @app.cell
@@ -127,7 +131,7 @@ def _install(mo, subprocess, sys):
         "google-genai",
         "together",
     ]
-    ml = ["transformers", "accelerate", "autoawq"]
+    ml = ["accelerate", "autoawq"]
 
     have_ml = False
     installed_version = None
@@ -139,21 +143,23 @@ def _install(mo, subprocess, sys):
     except Exception:
         pass
 
-    needs_ml = not have_ml or int(installed_version.split(".")[0]) < 5
-    if needs_ml:
-        note = "installing transformers/accelerate/autoawq (transformers >= 5 required for the AWQ `dtype=` kwarg)"
+    needs_tr = not have_ml or int(installed_version.split(".")[0]) < 5
+    if needs_tr:
+        note = "installing/upgrading transformers (transformers >= 5 required for the AWQ `dtype=` kwarg)"
         if have_ml:
             note = f"upgrading transformers {installed_version} -> 5.x " + note.split("(")[1]
         mo.md(f"**Install note:** {note}")
 
     pkgs = list(core)
-    if needs_ml:
-        pkgs += ml
+    if needs_tr:
+        pkgs.append("transformers")
+    pkgs += ml
     subprocess.run(
         [sys.executable, "-m", "pip", "install", "--quiet", "--prefer-binary", *pkgs],
         check=True,
     )
 
+    import importlib.metadata as _md
     import cachesaver as cs
     import torch as torch_new
     import transformers as transformers_new
@@ -169,7 +175,7 @@ def _install(mo, subprocess, sys):
         "torch": torch_new.__version__,
         "transformers": transformers_new.__version__,
         "accelerate": acc_ver,
-        "cachesaver": cs.__version__,
+        "cachesaver": _md.version("cachesaver"),
         "cuda_available": torch_new.cuda.is_available(),
     }
     version_report
@@ -177,10 +183,21 @@ def _install(mo, subprocess, sys):
 
 
 @app.cell
-def _clone_repo(REPO_DIR, REPO_URL, subprocess):
-    """Clone (or refresh) the benchmark repo into molab's persistent storage."""
+def _clone_repo(os, REPO_DIR, REPO_OWNER_REPO, REPO_URL, subprocess):
+    """Clone (or refresh) the benchmark repo into molab's persistent storage.
+
+    The repo is private, so cloning needs a GitHub PAT (Content read+write).
+    Set the `GITHUB_TOKEN` env var, or enter the same token in the PAT form
+    (the push cell) before this cell runs.
+    """
+    _gh_token = os.environ.get("GITHUB_TOKEN") or ""
+    if REPO_OWNER_REPO and _gh_token:
+        auth_url = f"https://x-access-token:{_gh_token}@github.com/{REPO_OWNER_REPO}.git"
+    else:
+        auth_url = REPO_URL
+
     if not (REPO_DIR / ".git").exists():
-        subprocess.run(["git", "clone", REPO_URL, str(REPO_DIR)], check=True)
+        subprocess.run(["git", "clone", auth_url, str(REPO_DIR)], check=True)
     else:
         subprocess.run(["git", "-C", str(REPO_DIR), "fetch", "origin", "--prune"], check=True)
         subprocess.run(["git", "-C", str(REPO_DIR), "checkout", "main"], check=True)
