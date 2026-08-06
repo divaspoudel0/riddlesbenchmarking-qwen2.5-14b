@@ -76,6 +76,18 @@ class LocalTransformersAdapter(Model):
         else:
             load_params.pop("torch_dtype", None)
 
+        quantization_config = load_params.get("quantization_config")
+        if isinstance(quantization_config, dict):
+            from transformers import AwqConfig
+
+            load_params["quantization_config"] = AwqConfig(
+                **{
+                    key: value
+                    for key, value in quantization_config.items()
+                    if key in AwqConfig.__dataclass_fields__
+                }
+            )
+
         dtype = load_params.get("dtype")
         if isinstance(dtype, str):
             # Pass the dtype as a string; Transformers resolves it to a torch dtype
