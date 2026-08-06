@@ -18,10 +18,11 @@ def _():
 def _intro(mo):
     mo.md(
         r"""
-        # Qwen2.5-14B-Instruct-AWQ — Multicultural Riddles benchmark (molab)
+        # Qwen2.5-Instruct-AWQ — Multicultural Riddles benchmark (molab)
 
-        Runs the Qwen2.5-14B-Instruct-AWQ model over the Multicultural Riddles pilot
-        dataset on the **molab** free tier. Execute the cells top to bottom:
+        Runs a Qwen2.5 Instruct AWQ model (**14B** or **32B** — pick one in the
+        dropdown below) over the Multicultural Riddles pilot dataset on the
+        **molab** free tier. Execute the cells top to bottom:
 
         1. **Install** — framework deps + `transformers`, `accelerate`, `autoawq`.
         2. **Clone** — pull the benchmark repo into molab's persistent storage.
@@ -68,19 +69,36 @@ def _stdlib_imports():
 
 
 @app.cell
-def _constants():
+def _constants(mo):
     REPO_URL = "https://github.com/divaspoudel0/riddlesbenchmarking-e109e377.git"
     REPO_OWNER_REPO = "divaspoudel0/riddlesbenchmarking-e109e377"
     REPO_DIR = Path.home() / "riddlesbenchmarking"
-    MODEL_ID = "Qwen/Qwen2.5-14B-Instruct-AWQ"
-    CONFIG_PATH = REPO_DIR / "framework/configs/benchmark_v0/qwen2.5_14b_awq.yaml"
+
+    MODELS = {
+        "Qwen/Qwen2.5-14B-Instruct-AWQ": {
+            "config": "qwen2.5_14b_awq.yaml",
+            "tag": "qwen2.5-14b",
+        },
+        "Qwen/Qwen2.5-32B-Instruct-AWQ": {
+            "config": "qwen2.5_32b_awq.yaml",
+            "tag": "qwen2.5-32b",
+        },
+    }
+    model_choice = mo.radio(
+        options=list(MODELS),
+        value="Qwen/Qwen2.5-14B-Instruct-AWQ",
+        label="Hugging Face AWQ model",
+    )
+    MODEL_ID = model_choice.value
+    MODEL_TAG = MODELS[MODEL_ID]["tag"]
+    CONFIG_PATH = REPO_DIR / "framework/configs/benchmark_v0" / MODELS[MODEL_ID]["config"]
+
     DATASET_PATH = REPO_DIR / "data_loading/pilot_dataset/pilot_dataset_v1.jsonl"
     SMOKE_PATH = REPO_DIR / "data_loading/pilot_dataset/smoke_test_25.jsonl"
     CACHE_DIR = REPO_DIR / "framework/.cache/cachesaver"
     OUTPUT_ROOT = REPO_DIR / "framework/runs"
     PROGRESS_EVERY = 25
     TASK_ID = "ID"  # TODO: replace with your tracking-sheet ID
-    MODEL_TAG = "qwen2.5-14b"
     return (
         CACHE_DIR,
         CONFIG_PATH,
@@ -94,6 +112,7 @@ def _constants():
         REPO_URL,
         SMOKE_PATH,
         TASK_ID,
+        model_choice,
     )
 
 
@@ -206,12 +225,14 @@ def _framework_imports(REPO_DIR, sys):
 def _model_load(
     CACHE_DIR,
     CONFIG_PATH,
+    MODEL_ID,
     create_model,
     load_prompt_template,
     load_run_config_from_yaml,
     time,
 ):
-    """Load the AWQ model once. Re-run this cell to reload after a session restart."""
+    """Load the selected AWQ model once. Re-run this cell (and the batch cells) to
+    switch models after changing the dropdown."""
     import torch as _torch
 
     run_config = load_run_config_from_yaml(str(CONFIG_PATH))
@@ -230,6 +251,7 @@ def _model_load(
         "batch_size": run_config.batch_size,
     }
 
+    print(f"loading {MODEL_ID} …")
     t0 = time.time()
     model = create_model(run_config.model_spec, adapter_cfg)
     load_s = time.time() - t0
@@ -446,7 +468,7 @@ def _token_form(mo):
 
 
 @app.cell
-def _push_github(REPO_DIR, REPO_OWNER_REPO, subprocess, token_form):
+def _push_github(MODEL_TAG, REPO_DIR, REPO_OWNER_REPO, subprocess, token_form):
     """Commit results and push them to GitHub. Re-runs only when the form above is submitted."""
     token = token_form.value
     if token is None:
@@ -474,7 +496,7 @@ def _push_github(REPO_DIR, REPO_OWNER_REPO, subprocess, token_form):
                     "user.email=molab-runner@users.noreply.github.com",
                     "commit",
                     "-m",
-                    "Qwen2.5-14B-Instruct-AWQ molab benchmark results",
+                    f"Qwen2.5-Instruct-AWQ ({MODEL_TAG}) molab benchmark results",
                 ],
                 check=True,
                 capture_output=True,
