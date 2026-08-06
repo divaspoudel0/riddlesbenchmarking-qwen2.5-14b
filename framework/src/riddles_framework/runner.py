@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from .constants import GenerationStatus
 from .dataset_loader import load_benchmark_instances
@@ -58,11 +58,30 @@ class BenchmarkRunner:
         prompt_template: PromptTemplate,
         model,
         output_root: str | Path = "runs",
+        on_progress: Callable[[int, int, int, int, int], None] | None = None,
     ) -> None:
+        """Optional ``on_progress(processed, total, completed, errored, skipped)``
+        is invoked after each instance is processed, so interactive callers
+        (e.g. marimo notebooks) can stream progress while a run is in flight.
+        """
         self.run_config = run_config
         self.prompt_template = prompt_template
         self.model = model
         self.output_root = Path(output_root)
+        self.on_progress = on_progress
+        self._processed = 0
+
+    def _emit_progress(self, metadata: RunMetadata) -> None:
+        if self.on_progress is None:
+            return
+        self._processed += 1
+        self.on_progress(
+            self._processed,
+            metadata.total_instances,
+            metadata.completed_instances,
+            metadata.error_instances,
+            metadata.skipped_instances,
+        )
 
     def _update_metadata_counts(
         self,
@@ -126,6 +145,7 @@ class BenchmarkRunner:
         )
         writer.append_result(result.to_dict())
         self._update_metadata_counts(metadata, gen)
+        self._emit_progress(metadata)
 
     def _append_skipped_result(
         self,
@@ -146,6 +166,7 @@ class BenchmarkRunner:
         )
         writer.append_result(result.to_dict())
         metadata.skipped_instances += 1
+        self._emit_progress(metadata)
 
     def _process_batch(
         self,

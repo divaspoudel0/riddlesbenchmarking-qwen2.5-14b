@@ -109,7 +109,16 @@ class LocalTransformersAdapter(Model):
             return None
 
     def _encode_prompt(self, prompt: str) -> dict[str, Any]:
-        tokenized = self.tokenizer(prompt, return_tensors="pt")
+        if getattr(self.tokenizer, "chat_template", None):
+            tokenized = self.tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt}],
+                add_generation_prompt=True,
+                tokenize=True,
+                return_dict=True,
+                return_tensors="pt",
+            )
+        else:
+            tokenized = self.tokenizer(prompt, return_tensors="pt")
         model = getattr(getattr(self.client, "model", None), "model", None)
         device = getattr(model, "device", None)
         if device is None and hasattr(model, "parameters"):
@@ -130,11 +139,21 @@ class LocalTransformersAdapter(Model):
             if eos_token_id is not None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        tokenized = self.tokenizer(
-            prompts,
-            padding=True,
-            return_tensors="pt",
-        )
+        if getattr(self.tokenizer, "chat_template", None):
+            tokenized = self.tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt} for prompt in prompts],
+                add_generation_prompt=True,
+                tokenize=True,
+                padding=True,
+                return_dict=True,
+                return_tensors="pt",
+            )
+        else:
+            tokenized = self.tokenizer(
+                prompts,
+                padding=True,
+                return_tensors="pt",
+            )
         model = getattr(getattr(self.client, "model", None), "model", None)
         device = getattr(model, "device", None)
         if device is None and hasattr(model, "parameters"):

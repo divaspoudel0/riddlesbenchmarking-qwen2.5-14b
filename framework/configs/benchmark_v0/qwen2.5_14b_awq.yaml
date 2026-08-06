@@ -1,0 +1,70 @@
+# Qwen2.5-14B-Instruct-AWQ — local transformers run (molab free tier).
+#
+# Compute happens on molab (molab.marimo.io): a marimo notebook attaches a free
+# NVIDIA RTX GPU and runs this config through the framework. See
+# molab/qwen2.5_14b_awq.py for the full notebook.
+#
+# The dataset's riddles carry a `run_batch` tag (v0 / v1 / v2). This config runs
+# the FULL pilot dataset; pass --run-batch v0 (or v1 / v2) to run a single
+# batch, or set `run_batches` below. The notebook drives each batch in its own
+# cell so progress is visible and runs are resumable via CacheSaver.
+
+runner_name: your-name
+
+dataset_path: ../data_loading/pilot_dataset/pilot_dataset_v1.jsonl
+dataset_version: pilot_dataset_v1
+
+prompt_template_id: riddle_master
+prompt_template_version: v1
+prompt_language: eng
+riddle_language_presented: source
+is_hint_provided: false
+
+reasoning_mode: null
+search_enabled: false
+batch_mode: true
+batch_size: 8
+
+temperature: null
+max_output_tokens: 4096
+seed: null
+
+model_params:
+  model_load:
+    device_map: auto
+    dtype: auto
+    low_cpu_mem_usage: true
+
+cache_enabled: true
+cache_backend: cachesaver
+cache_namespace: multicultural_riddles/pilot_dataset_v1/qwen2.5-14B-Instruct-AWQ/source_no_hint/master_v1
+cache_dir: .cache/cachesaver
+local_cache_client_mode: sync
+
+api_key_env_var: null
+base_url: null
+
+runner_version: v1.0.0
+notes: >-
+  Qwen2.5-14B-Instruct-AWQ (AWQ 4-bit) via the local transformers adapter on the
+  molab free tier. Uses the tokenizer chat template so the instruct model is
+  prompted in its native <|im_start|> format. Runs split per run_batch (v0/v1/v2);
+  CacheSaver cache in framework/.cache/cachesaver makes re-runs resume fast.
+strict_capability_check: true
+
+model_spec:
+  model_name: Qwen2.5-14B-Instruct-AWQ
+  model_id: local/Qwen2.5-14B-Instruct-AWQ
+  provider: local
+  access_pattern: local
+  provider_model_name: Qwen/Qwen2.5-14B-Instruct-AWQ
+  closed_source: false
+  notes: >-
+    Requires the `local` extra (transformers, torch, accelerate) plus `autoawq`
+    to decode the AWQ 4-bit weights. See molab/qwen2.5_14b_awq.py.
+  capabilities:
+    supports_reasoning: false
+    supports_search: false
+    supports_structured_output: false
+    supports_batch: true
+    supports_seed: true
