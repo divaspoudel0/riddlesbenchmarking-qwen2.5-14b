@@ -414,32 +414,25 @@ class LocalTransformersAdapter(Model):
         max_output_tokens: int,
         model_params: dict[str, Any] | None,
     ) -> tuple[list[str | None], Any, list[int | None]]:
-        encoded = self._encode_prompts(prompts)
-        input_tokens = self._batch_input_token_counts(encoded, prompts)
-        request_kwargs: dict[str, Any] = {
-            **encoded,
-            "max_new_tokens": max_output_tokens,
-        }
-
-        if temperature is not None:
-            request_kwargs["temperature"] = temperature
-            request_kwargs["do_sample"] = temperature > 0.0
-        else:
-            request_kwargs["do_sample"] = False
-
-        if getattr(self.tokenizer, "pad_token_id", None) is not None:
-            request_kwargs.setdefault("pad_token_id", self.tokenizer.pad_token_id)
-        elif getattr(self.tokenizer, "eos_token_id", None) is not None:
-            request_kwargs.setdefault("pad_token_id", self.tokenizer.eos_token_id)
-
-        if model_params:
-            request_kwargs.update(model_params)
-
-        generated_ids, cache_metadata = self.client.chat.completions.create(
-            **request_kwargs,
-            metadata=True,
-        )
-        texts = self._decode_generated_texts(generated_ids, encoded, len(prompts))
+        texts: list[str | None] = []
+        input_tokens: list[int | None] = []
+        cached = duplicated = False
+        for prompt in prompts:
+            text, meta, n_tokens = self._call_cached_generate_client(
+                prompt,
+                temperature=temperature,
+                max_output_tokens=max_output_tokens,
+                model_params=model_params,
+            )
+            texts.append(text)
+            input_tokens.append(n_tokens)
+            if isinstance(meta, dict):
+                cached = cached or bool(meta.get("cached"))
+                duplicated = duplicated or bool(meta.get("duplicated"))
+            else:
+                cached = cached or bool(getattr(meta, "cached", None))
+                duplicated = duplicated or bool(getattr(meta, "duplicated", None))
+        cache_metadata = {"cached": cached, "duplicated": duplicated}
         return texts, cache_metadata, input_tokens
 
     def _call_pipeline_batch(
