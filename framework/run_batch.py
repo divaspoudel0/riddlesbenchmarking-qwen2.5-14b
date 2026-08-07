@@ -50,6 +50,9 @@ except Exception:
     pass
 
 from riddles_framework import cli  # noqa: E402
+
+cli.register_builtin_adapters()
+
 from riddles_framework.factory import create_model  # noqa: E402
 from riddles_framework.prompts import load_prompt_template  # noqa: E402
 from riddles_framework.yaml_config import load_run_config_from_yaml  # noqa: E402
