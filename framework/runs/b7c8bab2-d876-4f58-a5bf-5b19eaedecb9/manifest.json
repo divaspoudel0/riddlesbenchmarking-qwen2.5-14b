@@ -1,0 +1,17 @@
+{
+  "run_id": "b7c8bab2-d876-4f58-a5bf-5b19eaedecb9",
+  "status": "completed",
+  "model_name": "Qwen2.5-14B-Instruct-AWQ",
+  "model_id": "local/Qwen2.5-14B-Instruct-AWQ",
+  "run_batches": [
+    "v0"
+  ],
+  "total_instances": 4400,
+  "completed_instances": 4400,
+  "skipped_instances": 0,
+  "error_instances": 0,
+  "batch_mode_used": true,
+  "batch_size": 8,
+  "cache_enabled": true,
+  "cache_namespace": "multicultural_riddles/pilot_dataset_v1/qwen2.5-14B-Instruct-AWQ/source_no_hint/master_v1"
+}
