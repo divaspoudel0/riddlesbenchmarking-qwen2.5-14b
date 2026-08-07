@@ -80,11 +80,20 @@ class LocalTransformersAdapter(Model):
         if isinstance(quantization_config, dict):
             from transformers import AwqConfig
 
+            # transformers' AwqConfig keeps its fields on a parent class; on
+            # 5.x __dataclass_fields__ only enumerates quant_method, so a field
+            # filter would silently drop every knob (incl. backend), letting
+            # AutoConfig fall back to Marlin. Use an explicit allowlist.
+            awq_field_keys = {
+                "bits", "group_size", "zero_point", "version", "backend",
+                "desc_act", "modules_to_not_convert", "batch_size",
+                "use_exllama",
+            }
             load_params["quantization_config"] = AwqConfig(
                 **{
                     key: value
                     for key, value in quantization_config.items()
-                    if key in AwqConfig.__dataclass_fields__
+                    if key in awq_field_keys
                 }
             )
 
