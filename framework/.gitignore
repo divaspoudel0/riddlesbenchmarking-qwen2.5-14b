@@ -4,6 +4,10 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 runs/*
+!runs/*/
+runs/*/*
+!runs/*/results.jsonl
+!runs/*/manifest.json
 !runs/examples/
 !runs/pilot_dataset_results/
 .cache/
