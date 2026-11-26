@@ -1,19 +1,40 @@
+# Secrets
 .env
+.env.*
+
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+new_env/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Eval outputs (regenerable)
+evals/outputs/
 evals/*.jsonl
 evals/*.log
-evals/outputs/
-runs/*
 
-# Python envs
-.venv/
+# Logs
+*.log
 
-new_env
-HumanEval
-humaneval_validation/*.log
-# macOS metadata files
+# Human-eval source workbooks (not in git)
+HumanEval/
+
+# OS metadata
 .DS_Store
 **/.DS_Store
+Thumbs.db
 
 # Editor / IDE
 .vscode/
+.idea/

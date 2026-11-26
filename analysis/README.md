@@ -63,8 +63,23 @@ using the shared style.
 
 ```
 analysis/
-├── style.py                       # shared color scheme + fonts (apply_style, PALETTE, save_figure)
-├── V0DataV0Analysis.ipynb         # notebook template: wildcard topics across cultures
+├── style.py                        # shared colors + fonts (apply_style, PALETTE, save_figure)
 ├── requirements.txt
-└── figures/                       # generated output (PDF)
+├── fonts/                          # vendored Noto fonts for non-Latin scripts
+├── figures/                        # shared figure output
+├── V0DataV0Analysis.ipynb          # notebook: wildcard topics across cultures
+├── V0DataAnalysis_HumanValidatorsRatingDistribution.ipynb
+├── model_results_v0/               # model-performance analysis (v0 runs)
+├── v1_analysis/                    # dataset-side analysis of the v1 round
+├── riddle_survey_analysis/         # contributor reflection-survey analysis
+└── humaneval_validation/           # checks human-evaluation workbooks
 ```
+
+## Sub-analyses
+
+| Folder | Focus | Guide |
+| --- | --- | --- |
+| [`model_results_v0/`](model_results_v0/) | Loads run outputs + judge scores, builds the tidy frame, renders leaderboards, heatmaps, and failure-mode figures. | [README](model_results_v0/README.md) · [RUNBOOK](model_results_v0/RUNBOOK.md) |
+| [`v1_analysis/`](v1_analysis/) | Dataset quality and text features for the v1 collection round (wildcards, form, diversity, validator coverage). | [README](v1_analysis/README.md) |
+| [`riddle_survey_analysis/`](riddle_survey_analysis/) | Contributor reflection survey: confidence, resources, time, and topic difficulty. | [README](riddle_survey_analysis/README.md) |
+| [`humaneval_validation/`](humaneval_validation/) | Validates human-evaluation spreadsheets before analysis. | [README](humaneval_validation/README.md) |
