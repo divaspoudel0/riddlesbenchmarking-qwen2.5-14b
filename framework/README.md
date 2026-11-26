@@ -13,6 +13,8 @@ framework/
 ├── docs/                                 # human-readable docs
 │   ├── getting-started.md                # plain-language guide
 │   └── code-reference.md                 # file-by-file technical reference
+├── molab/                                # marimo notebook: Qwen2.5 AWQ on molab
+├── runs/                                 # run artifacts (results.jsonl, manifest)
 ├── tests/                                # pytest suite
 └── src/
     └── riddles_framework/                # the installed package
